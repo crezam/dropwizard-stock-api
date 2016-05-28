@@ -7,7 +7,7 @@ import org.hibernate.validator.constraints.NotEmpty;
 public class StockApiConfiguration extends Configuration {
 
     @NotEmpty
-    private String defaultStock = "CCZ";
+    private String defaultStock;
 
     @JsonProperty
     public String getDefaultStock() {
