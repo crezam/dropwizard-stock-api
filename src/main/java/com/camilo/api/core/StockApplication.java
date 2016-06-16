@@ -26,8 +26,8 @@ public class StockApplication extends Application<StockApiConfiguration> {
     public void run(StockApiConfiguration stockApiConfiguration, Environment environment) throws Exception {
 
         final StockResource = new StockResource(
-                stockApiConfiguration.getTemplate(),
-                stockApiConfiguration.getDefaultName()
+                stockApiConfiguration.getDefaultStock(),
+                null
         );
 
     }
