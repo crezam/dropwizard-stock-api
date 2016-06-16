@@ -9,6 +9,9 @@ public class StockApiConfiguration extends Configuration {
     @NotEmpty
     private String defaultStock;
 
+    @NotEmpty
+    private String defaultPrice;
+
     @JsonProperty
     public String getDefaultStock() {
         return defaultStock;
@@ -19,4 +22,13 @@ public class StockApiConfiguration extends Configuration {
         this.defaultStock = stock;
     }
 
+    @JsonProperty
+    public String getDefaultPrice() {
+        return defaultPrice;
+    }
+
+    @JsonProperty
+    public void setDefaultPrice(String defaultPrice) {
+        this.defaultPrice = defaultPrice;
+    }
 }
