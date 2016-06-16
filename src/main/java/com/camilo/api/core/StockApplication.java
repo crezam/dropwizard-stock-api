@@ -12,7 +12,6 @@ public class StockApplication extends Application<StockApiConfiguration> {
         new StockApplication().run(args);
     }
 
-    @Override
     public String geName() {
         return "stock-api";
     }
@@ -25,10 +24,11 @@ public class StockApplication extends Application<StockApiConfiguration> {
     @Override
     public void run(StockApiConfiguration stockApiConfiguration, Environment environment) throws Exception {
 
-        final StockResource = new StockResource(
+        final StockResource resource = new StockResource(
                 stockApiConfiguration.getDefaultStock(),
-                null
+                stockApiConfiguration.getDefaultPrice()
         );
+        environment.jersey().register(resource);
 
     }
 }
