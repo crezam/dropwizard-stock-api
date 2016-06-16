@@ -23,12 +23,8 @@ public class StockApiConfiguration extends Configuration {
     }
 
     @JsonProperty
-    public String getDefaultPrice() {
-        return defaultPrice;
-    }
+    public String getDefaultPrice() { return defaultPrice; }
 
     @JsonProperty
-    public void setDefaultPrice(String defaultPrice) {
-        this.defaultPrice = defaultPrice;
-    }
+    public void setDefaultPrice(String defaultPrice) { this.defaultPrice = defaultPrice; }
 }
