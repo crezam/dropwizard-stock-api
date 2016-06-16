@@ -12,7 +12,8 @@ public class StockApplication extends Application<StockApiConfiguration> {
         new StockApplication().run(args);
     }
 
-    public String geName() {
+    @Override
+    public String getName() {
         return "stock-api";
     }
 
