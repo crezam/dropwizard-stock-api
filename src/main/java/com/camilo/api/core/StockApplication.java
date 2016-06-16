@@ -1,6 +1,7 @@
 package com.camilo.api.core;
 
 import com.camilo.api.configuration.StockApiConfiguration;
+import com.camilo.api.resources.StockResource;
 import io.dropwizard.Application;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
@@ -23,6 +24,11 @@ public class StockApplication extends Application<StockApiConfiguration> {
 
     @Override
     public void run(StockApiConfiguration stockApiConfiguration, Environment environment) throws Exception {
+
+        final StockResource = new StockResource(
+                stockApiConfiguration.getTemplate(),
+                stockApiConfiguration.getDefaultName()
+        );
 
     }
 }
