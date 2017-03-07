@@ -1,5 +1,6 @@
 package com.camilo.api.core;
 
+import com.camilo.api.command.ApiVersionCommand;
 import com.camilo.api.configuration.StockApiConfiguration;
 import com.camilo.api.resources.StockResource;
 import io.dropwizard.Application;
@@ -19,7 +20,7 @@ public class StockApplication extends Application<StockApiConfiguration> {
 
     @Override
     public void initialize(Bootstrap<StockApiConfiguration> bootstrap) {
-
+        bootstrap.addCommand(new ApiVersionCommand("version", "Prints the API version"));
     }
 
     @Override
