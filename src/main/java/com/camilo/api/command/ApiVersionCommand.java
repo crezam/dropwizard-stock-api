@@ -8,7 +8,7 @@ import net.sourceforge.argparse4j.inf.Subparser;
 
 public class ApiVersionCommand extends ConfiguredCommand<StockApiConfiguration> {
 
-    protected ApiVersionCommand(String name, String description) {
+    public ApiVersionCommand(String name, String description) {
         super(name, description);
     }
 
@@ -19,7 +19,7 @@ public class ApiVersionCommand extends ConfiguredCommand<StockApiConfiguration> 
     }
 
     @Override
-    protected void run(Bootstrap<StockApiConfiguration> bootstrap, Namespace namespace, StockApiConfiguration stockApiConfiguration) throws Exception {
+    public void run(Bootstrap<StockApiConfiguration> bootstrap, Namespace namespace, StockApiConfiguration stockApiConfiguration) throws Exception {
         //TODO add version to the stockApiConfiguration
         System.out.println("v1");
     }
